@@ -1,0 +1,82 @@
+<html>
+<head>
+<style>
+table, th {
+    border: 5px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+<body background="images.jpg">
+<h1>Adjoint </h1>
+<table border= 5px style="width:100%;height:80%">
+
+<tr>
+<th><input type=number id="a1" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a2" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a3" value=0 style="width:70%;font-size:200%"></th>
+</tr>
+<tr>
+<th><input type=number id="a4" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a5" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a6" value=0 style="width:70%;font-size:200%"></th>
+</tr>
+<tr>
+<th><input type=number id="a7" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a8" value=0 style="width:70%;font-size:200%"></th>
+<th><input type=number id="a9" value=0 style="width:70%;font-size:200%"></th>
+</tr>
+</table>
+<br>
+<button onclick="myFunction()" style="font-size:200%;">Submit</button>
+<script>
+function myFunction() {
+    var a1=document.getElementById("a1");	var a2=document.getElementById("a2");
+    var a3=document.getElementById("a3");	var a4=document.getElementById("a4");
+	var a5=document.getElementById("a5");   var a6=document.getElementById("a6");
+	var a7=document.getElementById("a7");   var a8=document.getElementById("a8");
+	var a9=document.getElementById("a9"); 
+    
+	var c1=document.getElementById("c1");   var c2=document.getElementById("c2");
+	var c3=document.getElementById("c3");   var c4=document.getElementById("c4");
+	var c5=document.getElementById("c5");   var c6=document.getElementById("c6");
+	var c7=document.getElementById("c7");   var c8=document.getElementById("c8");
+	var c9=document.getElementById("c9"); 
+	
+    var d1,d2,d3,d4,d5,d6,d7,d8,d9,A1,A2,A3,A4,A5,A6,A7,A8,A9;
+	d1=Number(a1.value);d2=Number(a2.value);d3=Number(a3.value);
+	d4=Number(a4.value);d5=Number(a5.value);d6=Number(a6.value);
+	d7=Number(a7.value);d8=Number(a8.value);d9=Number(a9.value);
+	
+	A1=((d5*d9)-(d6*d8));A2=-((d4*d9)-(d6*d7));A3=((d4*d8)-(d5*d7));
+	A4=-((d2*d9)-(d3*d8));A5=((d1*d9)-(d7*d3));A6=-((d1*d8)-(d2*d7));
+	A7=((d2*d6)-(d3*d5));A8=-((d1*d6)-(d4*d3));A9=((d1*d5)-(d2*d4));
+	
+	c1.value=A1;c2.value=A4;c3.value=A7;c4.value=A2;c5.value=A5;c6.value=A8;
+	c7.value=A3;c8.value=A6;c9.value=A9;
+	   
+}
+
+</script>
+<br><br><br><br>
+<h1> Answer</h1>
+<table border= 5px style="width:100%;height:80%">
+
+<tr>
+<th><input type=button id="c1" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c2" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c3" Value=0 style="width:70%;font-size:200%"></th>
+</tr>
+<tr>
+<th><input type=button id="c4" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c5" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c6" Value=0 style="width:70%;font-size:200%"></th>
+</tr>
+<tr>
+<th><input type=button id="c7" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c8" Value=0 style="width:70%;font-size:200%"></th>
+<th><input type=button id="c9" Value=0 style="width:70%;font-size:200%"></th>
+</tr>
+</table>
+</body>
+</html>
